@@ -26,17 +26,36 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout repository
         uses: actions/checkout@v4
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
-      - name: Build with Jekyll
-        uses: actions/jekyll-build-pages@v1
+
+      - name: Set up Flutter
+        uses: subosito/flutter-action@v2
         with:
-          source: ./
-          destination: ./_site
+          flutter-version: '3.22.3' # Specify the Flutter version you need
+
+      - name: Install dependencies
+        run: flutter pub get
+
+      - name: Build Flutter web
+        run: flutter build web --release
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
+        with:
+          name: flutter-web-build
+          path: build/web
+      # - name: Checkout
+      #   uses: actions/checkout@v4
+      # - name: Setup Pages
+      #   uses: actions/configure-pages@v5
+      # - name: Build with Jekyll
+      #   uses: actions/jekyll-build-pages@v1
+      #   with:
+      #     source: ./
+      #     destination: ./_site
+      # - name: Upload artifact
+      #   uses: actions/upload-pages-artifact@v3
 
   # Deployment job
   deploy:
@@ -46,6 +65,20 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     steps:
+      # - name: Deploy to GitHub Pages
+      #   id: deployment
+      #   uses: actions/deploy-pages@v4
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Download artifact
+        uses: actions/download-artifact@v2
+        with:
+          name: flutter-web-build
+          path: build/web
+
       - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: build/web
