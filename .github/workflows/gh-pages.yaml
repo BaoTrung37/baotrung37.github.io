@@ -15,3 +15,5 @@ jobs:
         with:
           baseHref: /baotrung37/
           webRenderer: canvaskit
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_PAT }}
