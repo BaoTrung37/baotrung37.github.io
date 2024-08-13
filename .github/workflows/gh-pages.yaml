@@ -15,5 +15,5 @@ jobs:
           flutter-version: '3.22.3'
       - uses: bluefireteam/flutter-gh-pages@v7
         with:
-          baseHref: /my-portfolio/
+          baseHref: /baotrung37/
           webRenderer: canvaskit
