@@ -25,9 +25,9 @@ class AppColors {
 }
 
 final colorsLight = AppColors(
-  primaryColor: const Color(0xFF6200EE),
-  secondaryColor: Colors.white,
-  textPrimary: Colors.black,
+  primaryColor: Colors.white,
+  secondaryColor: const Color(0xFFCDB059),
+  textPrimary: Colors.white,
   textSecondary: Colors.black.withOpacity(0.6),
   border: Colors.grey.withOpacity(0.6),
   backgroundColor: const Color(0xFF121212),
@@ -35,9 +35,9 @@ final colorsLight = AppColors(
 );
 
 final colorsDark = AppColors(
-  primaryColor: const Color(0xFFBB86FC),
-  secondaryColor: Colors.black,
-  textPrimary: Colors.white,
+  primaryColor: Colors.white,
+  secondaryColor: const Color(0xFFCDB059),
+  textPrimary: Colors.black,
   textSecondary: Colors.white.withOpacity(0.6),
   border: Colors.grey.withOpacity(0.6),
   backgroundColor: const Color(0xFF121212),

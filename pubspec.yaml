@@ -18,6 +18,7 @@ dependencies:
   flutter_svg: ^2.0.10+1
   cupertino_icons: ^1.0.6
   cached_network_image: ^3.3.1
+  lottie: ^3.1.2
 
   # Responsive UI
   responsive_framework: ^1.4.0
@@ -66,6 +67,7 @@ flutter:
   assets:
     - assets/icons/
     - assets/images/
+    - assets/lottie/
 
 flutter_gen:
   output: lib/gen/ # Optional (default: lib/gen/)
@@ -80,3 +82,4 @@ flutter_gen:
   # Optional
   integrations:
     flutter_svg: true
+    lottie: true

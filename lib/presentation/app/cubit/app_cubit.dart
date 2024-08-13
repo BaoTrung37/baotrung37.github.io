@@ -17,8 +17,6 @@ class AppCubit extends Cubit<AppState> {
   }
 
   Future<void> _init() async {
-    emit(state.copyWith(status: AppStatus.initial));
-
     emit(
       state.copyWith(
         currentLanguage: Languages.en,
