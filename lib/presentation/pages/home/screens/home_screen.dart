@@ -11,12 +11,16 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: context.colors.backgroundColor,
-      body: Center(
-        child: Text(
-          'Home Screen',
-          style: AppTextStyles.headingLarge.copyWith(
-            color: context.colors.textPrimary,
-          ),
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            Text(
+              'Home Screen',
+              style: AppTextStyles.headingLarge.copyWith(
+                color: context.colors.textPrimary,
+              ),
+            ),
+          ],
         ),
       ),
     );
