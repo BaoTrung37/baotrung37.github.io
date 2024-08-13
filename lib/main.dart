@@ -8,9 +8,8 @@ import 'package:flutter_portfolio/presentation/app/app.dart';
 import 'package:flutter_portfolio/presentation/utilities/logger/app_logger.dart';
 
 void main() async {
-  WidgetsFlutterBinding.ensureInitialized();
-
   Future<void> startApp() async {
+    WidgetsFlutterBinding.ensureInitialized();
     Bloc.observer = MyBlocObserver();
 
     await configureDependencies();

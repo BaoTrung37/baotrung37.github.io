@@ -10,12 +10,17 @@ class AppColors {
 
   final Color border;
 
+  final Color backgroundColor;
+  final Color secondaryBackgroundColor;
+
   AppColors({
     required this.primaryColor,
     required this.secondaryColor,
     required this.textPrimary,
     required this.textSecondary,
     required this.border,
+    required this.backgroundColor,
+    required this.secondaryBackgroundColor,
   });
 }
 
@@ -25,6 +30,8 @@ final colorsLight = AppColors(
   textPrimary: Colors.black,
   textSecondary: Colors.black.withOpacity(0.6),
   border: Colors.grey.withOpacity(0.6),
+  backgroundColor: const Color(0xFF121212),
+  secondaryBackgroundColor: const Color(0xFF1E1E1F),
 );
 
 final colorsDark = AppColors(
@@ -33,6 +40,8 @@ final colorsDark = AppColors(
   textPrimary: Colors.white,
   textSecondary: Colors.white.withOpacity(0.6),
   border: Colors.grey.withOpacity(0.6),
+  backgroundColor: const Color(0xFF121212),
+  secondaryBackgroundColor: const Color(0xFF1E1E1F),
 );
 
 extension AppColorsExtension on BuildContext {
