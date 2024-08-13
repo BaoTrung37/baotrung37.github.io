@@ -3,22 +3,14 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter_portfolio/config/firebase/firebase_options.dart';
+import 'package:injectable/injectable.dart';
 
-enum Flavor {
-  dev,
-  prod;
-}
-
+@lazySingleton
 class AppConfig {
-  AppConfig({
-    required this.flavor,
-  });
-  final Flavor flavor;
-
-  String get name => flavor.name;
+  String get title => 'BaoTrung37 Portfolio';
 
   Future<void> init() async {
-    await _initFirebase();
+    // await _initFirebase();
   }
 
   Future<void> _initFirebase() async {
@@ -37,16 +29,5 @@ class AppConfig {
       FirebaseCrashlytics.instance.recordError(error, stack, fatal: true);
       return true;
     };
-  }
-
-  String get title {
-    switch (flavor) {
-      case Flavor.dev:
-        return 'App Dev';
-      case Flavor.prod:
-        return 'App';
-      default:
-        return 'App';
-    }
   }
 }

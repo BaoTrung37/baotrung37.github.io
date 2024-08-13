@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_portfolio/config/app_config.dart';
 import 'package:flutter_portfolio/config/theme/app_theme.dart';
 import 'package:flutter_portfolio/injection/di.dart';
@@ -43,9 +44,9 @@ class MyApp extends StatelessWidget {
             title: getIt<AppConfig>().title,
             localizationsDelegates: const [
               AppLocalizations.delegate,
-              // GlobalMaterialLocalizations.delegate,
-              // GlobalWidgetsLocalizations.delegate,
-              // GlobalCupertinoLocalizations.delegate,
+              GlobalMaterialLocalizations.delegate,
+              GlobalWidgetsLocalizations.delegate,
+              GlobalCupertinoLocalizations.delegate,
             ],
             theme: getThemeData(Brightness.light),
             locale: state.currentLanguage.locate,

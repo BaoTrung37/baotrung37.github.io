@@ -4,6 +4,6 @@ ThemeData getThemeData(Brightness brightness) {
   // final colors = brightness == Brightness.light ? colorsLight : colorsDark;
   return ThemeData(
     brightness: brightness,
-    scaffoldBackgroundColor: Colors.grey,
+    scaffoldBackgroundColor: Colors.white,
   );
 }

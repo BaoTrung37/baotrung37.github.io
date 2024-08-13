@@ -2,6 +2,7 @@ import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_portfolio/config/app_config.dart';
 import 'package:flutter_portfolio/injection/di.dart';
+import 'package:flutter_portfolio/presentation/navigation/app_router.dart';
 
 @RoutePage()
 class SplashScreen extends StatefulWidget {
@@ -28,7 +29,7 @@ class _SplashScreenState extends State<SplashScreen> {
   Future<void> _navigateToNextScreen() async {
     await Future.delayed(const Duration(seconds: 2));
 
-    // await getIt<AppRouter>().replace(const MainAppRoute());
+    await getIt<AppRouter>().replace(const HomeRoute());
   }
 
   @override
