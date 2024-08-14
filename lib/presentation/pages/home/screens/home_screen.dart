@@ -1,7 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_portfolio/config/color/app_colors.dart';
-import 'package:responsive_framework/responsive_framework.dart';
+import 'package:flutter_portfolio/presentation/presentation.dart';
 
 @RoutePage()
 class HomeScreen extends StatelessWidget {
@@ -13,44 +13,40 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: context.colors.backgroundColor,
       body: SingleChildScrollView(
-        child: ResponsiveRowColumn(
-          layout: ResponsiveBreakpoints.of(context).smallerThan(MOBILE)
-              ? ResponsiveRowColumnType.COLUMN
-              : ResponsiveRowColumnType.ROW,
+        child: Column(
           children: [
-            const ResponsiveRowColumnItem(
-              child: ResponsiveConstraints(
-                conditionalConstraints: [
-                  Condition.largerThan(
-                    name: MOBILE,
-                    value: BoxConstraints(
-                      maxWidth: 200,
-                      maxHeight: 200,
-                    ),
+            Row(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.all(20),
+                  child: Column(
+                    children: [
+                      Container(
+                        width: 150,
+                        height: 150,
+                        color: Colors.red,
+                      ),
+                      const Text(
+                        'Nguyễn Bảo Trung',
+                        style: AppTextStyles.headingMedium,
+                      ),
+                      const Text(
+                        'BaoTrung37',
+                        style: AppTextStyles.headingSmallLight,
+                      ),
+                      const Text(
+                        'Mobile Developer',
+                        style: AppTextStyles.headingSmallLight,
+                      ),
+                      Container(
+                        width: width * 0.5,
+                        color: context.colors.primaryColor,
+                        height: 1,
+                      ),
+                    ],
                   ),
-                  Condition.largerThan(
-                    name: TABLET,
-                    value: BoxConstraints(
-                      maxWidth: 300,
-                      maxHeight: 300,
-                    ),
-                  ),
-                ],
-                child: Column(
-                  children: [
-                    Text('Nguyễn Bảo Trung'),
-                    Text('BaoTrung37'),
-                    Text('Flutter Developer'),
-                  ],
                 ),
-              ),
-            ),
-            ResponsiveRowColumnItem(
-              rowFlex: 2,
-              child: Container(
-                height: 300,
-                color: Colors.green,
-              ),
+              ],
             ),
           ],
         ),

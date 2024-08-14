@@ -9,6 +9,7 @@ class AppTextStyles {
     fontSize: 32,
     height: 1.19,
     letterSpacing: 0,
+    color: Colors.white,
   );
 
   static const headingLarge = TextStyle(
@@ -16,6 +17,7 @@ class AppTextStyles {
     fontSize: 32,
     height: 1.19,
     letterSpacing: 0,
+    color: Colors.white,
   );
 
   static const headingMedium = TextStyle(
@@ -23,6 +25,7 @@ class AppTextStyles {
     fontSize: 24,
     height: 1.33,
     letterSpacing: 0,
+    color: Colors.white,
   );
 
   static const headingMediumLight = TextStyle(
@@ -30,6 +33,7 @@ class AppTextStyles {
     fontSize: 24,
     height: 1.17,
     letterSpacing: 0,
+    color: Colors.white,
   );
 
   static const headingSmall = TextStyle(
@@ -37,6 +41,7 @@ class AppTextStyles {
     fontSize: 18,
     height: 1.22,
     letterSpacing: 0,
+    color: Colors.white,
   );
 
   static const headingSmallLight = TextStyle(
@@ -44,6 +49,7 @@ class AppTextStyles {
     fontSize: 18,
     height: 1.22,
     letterSpacing: 0,
+    color: Colors.white,
   );
 
   static const headingXSmall = TextStyle(
@@ -51,6 +57,7 @@ class AppTextStyles {
     fontSize: 16,
     height: 1.25,
     letterSpacing: 0,
+    color: Colors.white,
   );
 
   static const headingXSmallLight = TextStyle(
@@ -58,6 +65,7 @@ class AppTextStyles {
     fontSize: 16,
     height: 1.25,
     letterSpacing: 0,
+    color: Colors.white,
   );
 
   static const headingXXSmall = TextStyle(
@@ -65,6 +73,7 @@ class AppTextStyles {
     fontSize: 14,
     height: 1.29,
     letterSpacing: 0,
+    color: Colors.white,
   );
 
   static const headingXXSmallLight = TextStyle(
@@ -72,6 +81,7 @@ class AppTextStyles {
     fontSize: 14,
     height: 1.43,
     letterSpacing: 0,
+    color: Colors.white,
   );
 
   /// Text (PARAGRAPHS, DESCRIPTIONS)
@@ -82,6 +92,7 @@ class AppTextStyles {
     fontSize: 16,
     height: 1.75,
     letterSpacing: 0,
+    color: Colors.white,
   );
 
   static const textLargeBold = TextStyle(
@@ -89,6 +100,7 @@ class AppTextStyles {
     fontSize: 16,
     height: 1.75,
     letterSpacing: 0,
+    color: Colors.white,
   );
 
   static const textMedium = TextStyle(
@@ -96,6 +108,7 @@ class AppTextStyles {
     fontSize: 14,
     height: 1.71,
     letterSpacing: 0,
+    color: Colors.white,
   );
 
   static const textMediumBold = TextStyle(
@@ -103,6 +116,7 @@ class AppTextStyles {
     fontSize: 14,
     height: 1.71,
     letterSpacing: 0,
+    color: Colors.white,
   );
 
   static const textSmall = TextStyle(
@@ -110,6 +124,7 @@ class AppTextStyles {
     fontSize: 12,
     height: 1.67,
     letterSpacing: 0,
+    color: Colors.white,
   );
 
   static const textSmallBold = TextStyle(
@@ -117,6 +132,7 @@ class AppTextStyles {
     fontSize: 12,
     height: 1.67,
     letterSpacing: 0,
+    color: Colors.white,
   );
 
   /// Labels (BUTTON TEXT, TAGS)
