@@ -9,7 +9,6 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final width = MediaQuery.of(context).size.width;
     return Scaffold(
       backgroundColor: context.colors.backgroundColor,
       body: SingleChildScrollView(
@@ -39,7 +38,7 @@ class HomeScreen extends StatelessWidget {
                         style: AppTextStyles.headingSmallLight,
                       ),
                       Container(
-                        width: width * 0.5,
+                        width: MediaQuery.of(context).size.width * 0.5,
                         color: context.colors.primaryColor,
                         height: 1,
                       ),
